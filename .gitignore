@@ -42,7 +42,7 @@ models/
 *.bin
 *.safetensors
 *.gguf
-
+Git_token.txt
 # Logs
 logs/
 *.log
