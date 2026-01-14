@@ -1,6 +1,6 @@
 from huggingface_hub import login
-from huggingFace_token import token
-login(token=token)
+# from huggingFace_token import token
+# login(token=token)
 
 #!/usr/bin/env python3
 
