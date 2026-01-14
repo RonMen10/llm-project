@@ -25,7 +25,7 @@ def main():
     
     # ========== CONFIGURATION ==========
     MODEL_NAME = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"  # Public, no auth needed
-    OUTPUT_DIR = "./my-finetuned-model"
+    OUTPUT_DIR = "./my_finetuned_model"
     
     # ========== 1. LOAD TOKENIZER ==========
     print("\n1. Loading tokenizer...")
