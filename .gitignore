@@ -48,6 +48,6 @@ scripts/huggingFace_token.py
 # Logs
 logs/
 *.log
-
+.coverage
 # Checkpoints
 checkpoint*/

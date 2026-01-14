@@ -1,6 +1,6 @@
 from huggingface_hub import login
-# from huggingFace_token import token
-# login(token=token)
+from huggingFace_token import token
+login(token=token)
 
 #!/usr/bin/env python3
 
@@ -8,6 +8,7 @@ import torch
 import os
 import json
 from datasets import Dataset, load_dataset
+import ArgumentParser
 from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
@@ -272,6 +273,8 @@ bitsandbytes>=0.42.0
     print("2. pip install -r requirements.txt")
     print("3. python inference.py")
     print("=" * 60)
+
+    arguments = ArgumentParser.ArgumentParser(description="Fine-tune a LLM with LoRA and 4-bit quantization")
 
 if __name__ == "__main__":
     main()
