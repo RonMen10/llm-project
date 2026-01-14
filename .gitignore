@@ -42,7 +42,9 @@ models/
 *.bin
 *.safetensors
 *.gguf
+# Tokens
 Git_token.txt
+scripts/huggingFace_token.py
 # Logs
 logs/
 *.log
