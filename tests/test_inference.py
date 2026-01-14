@@ -38,5 +38,16 @@ def test_inference_imports():
     assert "transformers" in content, "Should import transformers"
     assert "torch" in content, "Should import torch"
 
+def test_inference_with_prompt():
+    """Test that inference script can be run with a sample prompt"""
+    # This is a basic syntax check; actual model loading and inference
+    from inference import Inference
+    inference = Inference()
+    test_prompt = "Who is Ronald?"
+    inputs = inference.tokenizer(test_prompt, return_tensors="pt").to("cuda")
+    response = inference.generate_response(inputs, max_tokens=200)
+    assert isinstance(response, str), "Response should be string"
+    assert len(response.strip()) > 0, "Response should not be empty"
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
