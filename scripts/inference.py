@@ -4,7 +4,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 device = "cuda" if torch.cuda.is_available() else "cpu"
 class Inference():
-    def __init__(self, model_path="./my-finetuned-model"):
+    def __init__(self, model_path="./my_finetuned_model"):
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,
